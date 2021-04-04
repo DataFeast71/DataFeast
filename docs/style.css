@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Vikingstyle";
+  src: url("fonts/Norsebold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+h1 {
+  font-family: "Vikingstyle";
+  color: #46473e;
+  font-size: 150px;
+  position: absolute;
+  top: 10px;
+  left: 30%;
+}
+
+canvas {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+}
