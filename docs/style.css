@@ -13,7 +13,7 @@ body {
   background: black;
 }
 
-h1 {
+h1 a {
   font-family: "Vikingstyle";
   color: #46473e;
   font-size: 150px;
@@ -24,7 +24,7 @@ h1 {
 
 canvas {
   position: absolute;
-  top: 65%;
+  top: 450px;
   left: 50%;
   width: 500px;
   height: 500px;
