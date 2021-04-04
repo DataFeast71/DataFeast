@@ -1,5 +1,5 @@
 const image = new Image();
-image.src = "Ship.jpeg";
+image.src = "../img/Ship.jpeg";
 
 function calculateBrigntness(red, green, blue) {
   return Math.sqrt(
