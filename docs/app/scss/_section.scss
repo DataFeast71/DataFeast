@@ -1,0 +1,43 @@
+.section {
+  padding-top: 20px;
+  width: 100%;
+
+  &__main {
+    width: 50%;
+    float: left;
+    padding-left: 25px;
+
+    a {
+      font-family: "VikingstyleBold";
+      color: $greyMetal;
+      font-size: 15.95rem;
+      text-align: center;
+      display: block;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: $redDark;
+      }
+    }
+  }
+
+  canvas {
+    position: relative;
+    left: 10%;
+    width: 824px;
+    height: 632px;
+  }
+}
+
+.section2 {
+  background: $greyMetal;
+  &__col {
+    width: 50%;
+    text-align: center;
+
+    img {
+      width: 100%;
+      padding-top: 6px;
+    }
+  }
+}

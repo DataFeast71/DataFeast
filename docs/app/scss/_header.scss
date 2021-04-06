@@ -1,0 +1,58 @@
+.header {
+  background: $greyMetal;
+
+  nav {
+    padding: 0.425rem 1.5rem;
+  }
+
+  &__logo {
+    font-family: "VikingstyleBold";
+    position: relative;
+    font-size: 40px;
+    color: $white;
+    img {
+      height: 2.575rem;
+    }
+
+    &:hover {
+      color: $redBright;
+    }
+  }
+
+  &__links {
+    a {
+      position: relative;
+      font-size: $font-med;
+      color: $white;
+      transition: color 300ms ease-in-out;
+      transition: font-family 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: -21px;
+        border-radius: 50px;
+        background: linear-gradient(to left, $redBright, $greyLight);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      &:hover {
+        font-family: "VikingstyleBold";
+        color: $redBright;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

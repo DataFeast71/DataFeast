@@ -5,65 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Feast</title>
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="app/scss/style.css" />
     <!-- FavIcon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://raw.githubusercontent.com/DataFeast71/DataFeast/main/img/DataFeast.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="img/DataFeast.ico" />
   </head>
   <body>
-    <!-- Simple NavBar -->
-    <nav class="navbar navbar-dark bg-secondary">
-      <div class="container">
-        <a href="#" class="navbar-brand"
-          ><img src="../img/Ship.jpeg" id="logo" /> Data Feast</a
-        >
-      </div>
-    </nav>
+    <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo">
+          <img src="img/Ship.jpeg" alt="Data Feast" /> Data Feast
+        </a>
+
+        <!-- links -->
+
+        <div class="header__links hide-for-mobile">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+        </div>
+      </nav>
+    </header>
 
     <!-- Change the image -->
-    <section class="main-web">
-      <div class="ship-canvas">
-        <canvas id="canvas1"></canvas>
-      </div>
-      <div class="main-title">
-        <h1>
-          <a
-            href="https://www.facebook.com/An%C3%A1lisis-y-visualizaci%C3%B3n-de-datos-100602148375744"
-            >Data<br>Feast</a
-          >
-        </h1>
+    <section class="section">
+      <div class="flex flex-jc-sb flex-ai-c">
+        <div class="section__main">
+          <canvas id="canvas1"></canvas>
+        </div>
+        <div class="section__main">
+          <h1>
+            <a
+              href="https://www.facebook.com/An%C3%A1lisis-y-visualizaci%C3%B3n-de-datos-100602148375744"
+              >Data<br />Feast</a
+            >
+          </h1>
+        </div>
       </div>
     </section>
 
-    
+    <hr class="style-four" />
+
+    <section class="flex section2">
+      <div class="flex flex-jc-sb flex-ai-c">
+        <div class="section2__col">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas
+            laboriosam architecto, obcaecati doloremque maiores tenetur veniam
+            sapiente natus dolorum eum.
+          </p>
+        </div>
+        <div class="section2__col">
+          <img
+            class="section___col__img"
+            src="img/einar-martinsen-viking-boatarrival-em-02.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <br />
     <!-- Custom Javascript -->
-    <script src="main.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
+    <script src="app/js/main.js"></script>
   </body>
 </html>
