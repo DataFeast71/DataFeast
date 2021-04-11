@@ -23,21 +23,96 @@
 
   canvas {
     position: relative;
-    left: 10%;
-    width: 824px;
-    height: 632px;
+    left: 6%;
+    // width: 824px;
+    // height: 632px;
+    @include breakpoint-up(medium) {
+      left: -6%;
+    }
+
+    @include breakpoint-up(xlarge) {
+      left: 15%;
+    }
+
   }
 }
 
 .section2 {
+  display: block;
   background: $greyMetal;
+  @include breakpoint-up(large) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__col {
-    width: 50%;
+    // width: 100%;
     text-align: center;
 
-    img {
-      width: 100%;
-      padding-top: 6px;
+    @include breakpoint-up(large) {
+      order: 1;
+      width: 50%;
+    }
+  }
+
+  &__img {
+    position: relative;
+    background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 26rem;
+
+    @include breakpoint-up(large) {
+      order: 2;
+      position: relative;
+      background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 36rem;
+      width: 50%;
+    }
+  }
+}
+
+.section3 {
+  display: block;
+  background: $greyMetal;
+  @include breakpoint-up(large) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__col {
+    text-align: center;
+
+
+    @include breakpoint-up(large) {
+      order: 2;
+      width: 50%;
+    }
+  }
+
+  &__img {
+    position: relative;
+    background-image: url("../../img/einar-martinsen-thorun-mountainvillage-em-crop3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 26rem;
+
+    @include breakpoint-up(large) {
+      order: 1;
+      position: relative;
+      background-image: url("../../img/einar-martinsen-thorun-mountainvillage-em-crop3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 36rem;
+      width: 50%;
     }
   }
 }

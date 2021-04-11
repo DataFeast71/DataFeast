@@ -12,8 +12,25 @@ function calculateBrigntness(red, green, blue) {
 image.addEventListener("load", () => {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext("2d");
-  canvas.width = 824;
-  canvas.height = 632;
+  // console.log(canvas)
+  // if (canvas.getContext) {
+  //   ctx = canvas.getContext("2d");
+
+  //   window.addEventListener("resize", resizeCanvas, false);
+  //   resizeCanvas();
+  // }
+
+  // function resizeCanvas() {
+  //   canvas.width = window.innerWidth;
+  //   canvas.height = window.innerHeight;
+  // }
+  if (window.innerWidth < 600) {
+    canvas.width = 400;
+    canvas.height = 332;
+  } else {
+    canvas.width = 824;
+    canvas.height = 632;
+  }
 
   let particlesArray = [];
   const numberOfParticles = 5000;
@@ -43,7 +60,7 @@ image.addEventListener("load", () => {
       this.x = Math.random() * canvas.width;
       this.y = canvas.height;
       this.speed = 0;
-      this.velocity = Math.random() * 0.4;
+      this.velocity = Math.random() * 1.0;
       this.size = Math.random() * 2 + 0.5;
       this.position1 = Math.floor(this.y / detail);
       this.position2 = Math.floor(this.x / detail);

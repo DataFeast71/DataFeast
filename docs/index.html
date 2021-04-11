@@ -13,20 +13,33 @@
   </head>
   <body>
     <header class="header">
-      <nav class="flex flex-jc-sb flex-ai-c">
+      <div class="overlay has-fade"></div>
+      <nav class="container container--pall flex flex-jc-sb flex-ai-c">
         <a href="/" class="header__logo">
           <img src="img/Ship.jpeg" alt="Data Feast" /> Data Feast
         </a>
 
-        <!-- links -->
+        <!-- toggle -->
+        <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
 
+        <!-- links -->
         <div class="header__links hide-for-mobile">
           <a href="#">Home</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
-          <a href="#">Blog</a>
+          <a href="blog.html">Blog</a>
         </div>
       </nav>
+      <div class="header__menu has-fade">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="blog.html">Blog</a>
+      </div>
     </header>
 
     <!-- Change the image -->
@@ -35,11 +48,11 @@
         <div class="section__main">
           <canvas id="canvas1"></canvas>
         </div>
-        <div class="section__main">
+        <div class="section__main hide-for-mobile">
           <h1>
             <a
               href="https://www.facebook.com/An%C3%A1lisis-y-visualizaci%C3%B3n-de-datos-100602148375744"
-              >Data<br />Feast</a
+              >DATA<br />FEAST</a
             >
           </h1>
         </div>
@@ -48,29 +61,151 @@
 
     <hr class="style-four" />
 
-    <section class="flex section2">
-      <div class="flex flex-jc-sb flex-ai-c">
-        <div class="section2__col">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas
-            laboriosam architecto, obcaecati doloremque maiores tenetur veniam
-            sapiente natus dolorum eum.
-          </p>
-        </div>
-        <div class="section2__col">
-          <img
-            class="section___col__img"
-            src="img/einar-martinsen-viking-boatarrival-em-02.jpg"
-            alt=""
-          />
+    <section class="section2">
+      <div class="section2__col container--pall">
+        <h2>What we do?</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugit
+          qui alias cum officiis blanditiis nisi quae saepe in sed. Lorem ipsum
+          dolor sit amet consectetur, adipisicing elit. Molestiae a dolor
+          recusandae sed. Dolorum facere minima, nesciunt nihil consequatur
+          aliquid exercitationem omnis totam assumenda fugit corrupti itaque
+          deleniti architecto quos?
+        </p>
+      </div>
+      <div class="section2__img"></div>
+    </section>
+
+    <br>
+    
+    <section class="section3">
+      <div class="section3__col container--pall">
+        <h2>Why Data Feast?</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugit
+          qui alias cum officiis blanditiis nisi quae saepe in sed. Lorem ipsum
+          dolor sit amet consectetur, adipisicing elit. Molestiae a dolor
+          recusandae sed. Dolorum facere minima, nesciunt nihil consequatur
+          aliquid exercitationem omnis totam assumenda fugit corrupti itaque
+          deleniti architecto quos?
+        </p>
+      </div>
+      <div class="section3__img"></div>
+    </section>
+
+    <section class="articles">
+      <div class="article__content container containter--pall">
+        <h2>Last Articles</h2>
+
+        <div class="article__grid">
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="
+                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
+              "
+            ></div>
+            <div class="article__text">
+              <div class="article__title">Energy</div>
+              <div class="article__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad
+                est animi culpa quas magni nostrum obcaecati doloribus, incidunt
+                nisi, voluptatem nemo facilis tenetur officiis!
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="
+                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
+              "
+            ></div>
+            <div class="article__text">
+              <div class="article__title">COVID</div>
+              <div class="article__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad
+                est animi culpa quas magni nostrum obcaecati doloribus, incidunt
+                nisi, voluptatem nemo facilis tenetur officiis!
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="
+                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
+              "
+            ></div>
+            <div class="article__text">
+              <div class="article__title">Vaccines</div>
+              <div class="article__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad
+                est animi culpa quas magni nostrum obcaecati doloribus, incidunt
+                nisi, voluptatem nemo facilis tenetur officiis!
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="
+                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
+              "
+            ></div>
+            <div class="article__text">
+              <div class="article__title">Obesity</div>
+              <div class="article__description">
+                We explore the nutrition and obesity in countries along the
+                years ...
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
     <br />
     <br />
-    <br />
+
+    <footer class="footer">
+      <div class="container">
+        <a href="/" class="footer__logo">
+          <img src="img/Ship.jpeg" alt="Data Feast" /> Data Feast
+        </a>
+
+        <div class="footer__social">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <title>Facebook</title>
+              <path
+                fill="#FFF"
+                d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__links col1">
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <div class="footer__links col2">
+          <a href="blog.html">Blog</a>
+        </div>
+
+        <div class="footer__cta">
+          <a href="#" class="button footer__cta">Contact us</a>
+        </div>
+      </div>
+    </footer>
+
     <!-- Custom Javascript -->
     <script src="app/js/main.js"></script>
+    <script src="app/js/main-page.js"></script>
   </body>
 </html>

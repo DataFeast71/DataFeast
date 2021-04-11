@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  background: black;
   margin: 0;
   padding: 0;
   font-family: "Vikingstyle";
@@ -26,12 +27,56 @@ body {
   line-height: 1.3;
   font-size: 1.525rem;
   color: white;
+  min-height: 300vh;
+}
+body.noscroll {
+  overflow: hidden;
+}
+body.sendback {
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.sendBack {
+  z-index: 1;
+  opacity: 0.2;
 }
 
 a,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.container--pall {
+  padding-top: 2.25rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
+}
+.container--py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--pt {
+  padding-top: 2.25rem;
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--pb {
+  padding-bottom: 2.25rem;
+}
+.container--pl {
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -54,6 +99,22 @@ hr.style-four {
   box-shadow: inset 0 12px 12px -12px rgba(255, 255, 255, 0.5);
 }
 
+button,
+.button {
+  padding: 0.875rem 2.1875rem;
+  background: linear-gradient(to left, #b32400, #726e6e);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+  transition: opacity 300ms ease-in-out;
+}
+button:hover,
+.button:hover {
+  opacity: 0.75;
+}
+
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -66,11 +127,103 @@ hr.style-four {
   }
 }
 
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
+}
+
 .header {
   background: #46473e;
 }
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: linear-gradient(#750008, transparent);
+}
+.header.open .header__toggle > span:first-child {
+  transform: rotate(45deg);
+}
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__toggle > span:last-child {
+  transform: rotate(-45deg);
+}
 .header nav {
+  position: relative;
   padding: 0.425rem 1.5rem;
+  background-color: #46473e;
 }
 .header__logo {
   font-family: "VikingstyleBold";
@@ -83,6 +236,17 @@ hr.style-four {
 }
 .header__logo:hover {
   color: #b32400;
+}
+.header__toggle > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: white;
+  transition: all 300ms ease-in-out;
+  transform-origin: 3px 1px;
+}
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 5px;
 }
 .header__links a {
   position: relative;
@@ -114,6 +278,24 @@ hr.style-four {
 .header__links a:hover::before {
   opacity: 1;
 }
+.header__menu {
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2.125rem;
+  background: #46473e;
+  padding: 1.625rem;
+  border-radius: 5px;
+  z-index: 2;
+}
+.header__menu a {
+  display: block;
+  padding: 0.625rem;
+  color: white;
+  text-align: center;
+  font-family: "VikingstyleBold";
+}
 
 .section {
   padding-top: 20px;
@@ -137,19 +319,406 @@ hr.style-four {
 }
 .section canvas {
   position: relative;
-  left: 10%;
-  width: 824px;
-  height: 632px;
+  left: 6%;
+}
+@media (min-width: 40em) {
+  .section canvas {
+    left: -6%;
+  }
+}
+@media (min-width: 87.5em) {
+  .section canvas {
+    left: 15%;
+  }
 }
 
 .section2 {
+  display: block;
   background: #46473e;
 }
+@media (min-width: 64em) {
+  .section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .section2__col {
-  width: 50%;
   text-align: center;
 }
-.section2__col img {
+@media (min-width: 64em) {
+  .section2__col {
+    order: 1;
+    width: 50%;
+  }
+}
+.section2__img {
+  position: relative;
+  background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 26rem;
+}
+@media (min-width: 64em) {
+  .section2__img {
+    order: 2;
+    position: relative;
+    background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 36rem;
+    width: 50%;
+  }
+}
+
+.section3 {
+  display: block;
+  background: #46473e;
+}
+@media (min-width: 64em) {
+  .section3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.section3__col {
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .section3__col {
+    order: 2;
+    width: 50%;
+  }
+}
+.section3__img {
+  position: relative;
+  background-image: url("../../img/einar-martinsen-thorun-mountainvillage-em-crop3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 26rem;
+}
+@media (min-width: 64em) {
+  .section3__img {
+    order: 1;
+    position: relative;
+    background-image: url("../../img/einar-martinsen-thorun-mountainvillage-em-crop3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 36rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+}
+.hero__img {
+  position: relative;
+  background-image: url("../../img/einar-martinsen-viking-boatarrival-em-02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 20.5rem;
+}
+@media (min-width: 64em) {
+  .hero__img {
+    flex: 2;
+    order: 2;
+    height: 41rem;
+    background-image: url("../../img/einar-martinsen-viking-boatarrival-em-02.jpg");
+    background-position: center center;
+  }
+}
+.hero__text {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 1;
+    order: 1;
+  }
+}
+.hero__text h1 {
+  font-size: 5.15rem;
+  line-height: 1.15;
+  color: #6294ac;
+  font-family: "VikingstyleBold";
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 10.15rem;
+  }
+}
+
+.card {
+  background: white;
+  color: black;
+}
+.card__cta {
+  color: white;
+  transition: opacity 600ms ease-in-out;
+}
+.card__cta:hover {
+  opacity: 0.75;
+}
+
+.feature__intro {
+  margin-bottom: 3.75rem;
+}
+@media (min-width: 64em) {
+  .feature__intro {
+    max-width: 70%;
+  }
+}
+@media (min-width: 40em) {
+  .feature__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.feature__item {
+  background-color: white;
+  color: black;
+  border: 1px solid palevioletred;
+  border-radius: 15px;
+  padding: 0.95rem;
+  width: 90%;
+  margin: 1%;
+}
+@media (min-width: 40em) {
+  .feature__item {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 64em) {
+  .feature__item {
+    flex: 1;
+  }
+}
+.feature__image {
   width: 100%;
-  padding-top: 6px;
+  border: 1px solid palevioletred;
+  margin-bottom: 2rem;
+}
+@media (min-width: 64em) {
+  .feature__image {
+    margin-bottom: 2.75rem;
+  }
+}
+.feature__image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.feature__title {
+  font-family: "VikingstyleBold";
+  color: #6294ac;
+  line-height: 1.15;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: ) {
+  .feature__title {
+    font-size: 2.75rem;
+    margin-bottom: 2.12rem;
+  }
+}
+.feature__description {
+  font-size: 1.45rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+.feature__footer {
+  margin-bottom: 1.5rem;
+}
+
+.article__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 40em) {
+  .article__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .article__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.article__item {
+  border: 1px solid #726e6e;
+  background-color: #46473e;
+  border-radius: 0.312rem;
+  overflow: hidden;
+  box-shadow: 0px 3px 12px rgba(255, 255, 255, 0.15);
+  transition: all 200ms ease-in-out;
+}
+.article__item:hover {
+  transform: scale(1.05);
+}
+.article__image {
+  height: 12.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.article__text {
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+  color: white;
+}
+@media (min-width: 40em) {
+  .article__text {
+    padding: 1.875rem 1.562rem;
+  }
+}
+.article__title {
+  font-size: 2.12rem;
+  line-height: 1.15;
+  color: white;
+  font-family: "VikingstyleBold";
+  margin-bottom: 1rem;
+}
+.article__description {
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: #46473e;
+  font-family: "VikingstyleBold";
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr) 2fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "logo  links1 links2 cta" "social  links1 links2 copyright";
+    gap: 1rem;
+    justify-items: start;
+  }
+}
+.footer a {
+  color: white;
+}
+.footer__logo {
+  display: inline-block;
+  font-size: 2.575rem;
+  height: 3.045rem;
+}
+.footer__logo img {
+  height: 2.575rem;
+}
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 1.175rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__logo {
+    grid-area: logo;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 1.175rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__social {
+    grid-area: social;
+    align-self: end;
+  }
+}
+.footer__social a {
+  display: inline-block;
+  height: 1.5rem;
+}
+.footer__social a svg path {
+  transition: fill 150ms ease-in-out;
+}
+.footer__social a:hover svg path {
+  fill: #b32400;
+}
+.footer__social a:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5375rem;
+}
+@media (min-width: 64em) {
+  .footer__links {
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+.footer__links a {
+  line-height: 2;
+  transition: color 150ms ease-in-out;
+}
+.footer__links a:hover {
+  color: #b32400;
+}
+@media (min-width: 64em) {
+  .footer__links__col1 {
+    grid-area: links1;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__links__col2 {
+    margin-bottom: 1.175rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__links__col2 {
+    grid-area: links2;
+  }
+}
+.footer__cta a {
+  color: white;
+  transition: opacity 600ms ease-in-out;
+}
+.footer__cta a:hover {
+  opacity: 0.75;
+}
+@media (min-width: 64em) {
+  .footer__cta {
+    grid-area: cta;
+    text-align: right;
+    justify-self: end;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__cta a.button {
+    margin-bottom: 1.175rem;
+  }
+}
+.footer__copyright {
+  font-size: 0.9375rem;
+}
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+    align-self: end;
+    justify-self: end;
+  }
 }/*# sourceMappingURL=style.css.map */
