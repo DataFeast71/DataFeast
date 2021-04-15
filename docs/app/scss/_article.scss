@@ -42,6 +42,10 @@
   &__text {
     padding: 1.875rem 1.875rem 2.5rem 1.875rem;
     color: $white;
+    font-family: "Noto Sans", sans-serif;
+    // width: 100%;
+    text-align: left;
+    font-size: 1.15rem;
 
     @include breakpoint-up(medium) {
       padding: 1.875rem 1.562rem;

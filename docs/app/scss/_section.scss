@@ -24,16 +24,15 @@
   canvas {
     position: relative;
     left: 6%;
-    // width: 824px;
+    // width: 600px;
     // height: 632px;
     @include breakpoint-up(medium) {
       left: -6%;
     }
 
     @include breakpoint-up(xlarge) {
-      left: 15%;
+      left: 12%;
     }
-
   }
 }
 
@@ -47,31 +46,57 @@
   }
 
   &__col {
+    // font-family: "Public Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     // width: 100%;
-    text-align: center;
+    text-align: left;
+    font-size: 1.15rem;
+
+    h2 {
+      font-family: "VikingstyleBold";
+      font-size: 3.2rem;
+    }
 
     @include breakpoint-up(large) {
       order: 1;
       width: 50%;
     }
+
+    ul {
+      list-style: square;
+      list-style: none;
+
+      li {
+        padding-bottom: 6px;
+        padding-top: 6px;
+        padding-left: 37px;
+        background: url("../../img/ship-bullet_30x30.svg") no-repeat left 5px;
+        // list-style-image: url("../../img/ship-bullet_30x30.svg");
+      }
+    }
+    // li {
+    //   padding-bottom: 0px;
+    //   vertical-align:middle;
+    //   list-style-image: url("../../img/ship-bullet_30x30.svg");
+    // }
   }
 
   &__img {
     position: relative;
-    background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+    background-image: url("../../img/b82e325431d42075666844284edc4411.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    min-height: 26rem;
+    min-height: 25rem;
 
     @include breakpoint-up(large) {
       order: 2;
       position: relative;
-      background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+      background-image: url("../../img/b82e325431d42075666844284edc4411.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      min-height: 36rem;
+      min-height: 35rem;
       width: 50%;
     }
   }
@@ -88,7 +113,11 @@
 
   &__col {
     text-align: center;
-
+    
+    h2 {
+      font-family: "VikingstyleBold";
+      font-size: 3.2rem;
+    }
 
     @include breakpoint-up(large) {
       order: 2;

@@ -1,0 +1,53 @@
+.hero1 {
+  background-color: black;
+  display: block;
+  margin-bottom: 4.6875rem;
+
+  @include breakpoint-up(large) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    position: relative;
+    background-image: url("../../img/bg_data_analysis_small.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 25rem;
+
+    @include breakpoint-up(large) {
+      order: 2;
+      position: relative;
+      background-image: url("../../img/bg_data_analysis.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 40rem;
+      width: 60%;
+    }
+  }
+
+  &__text {
+    // position: relative;
+    // top: 70%;
+    // transform: translate(0, -20%);
+    text-align: center;
+    @include breakpoint-up(large) {
+      order: 1;
+      width: 40%;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 4rem;
+      font-family: "VikingstyleBold";
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.875rem;
+    }
+  }
+}

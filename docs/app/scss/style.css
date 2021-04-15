@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "VikingstyleBold";
   src: url("fonts/Norsebold.otf") format("opentype");
@@ -49,14 +50,14 @@ a:hover {
 }
 
 .container {
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 .container--pall {
   padding-top: 2.25rem;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
   padding-bottom: 2.25rem;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 .container--py {
   padding-top: 2.25rem;
@@ -101,18 +102,25 @@ hr.style-four {
 
 button,
 .button {
-  padding: 0.875rem 2.1875rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.175rem 2.1875rem;
   background: linear-gradient(to left, #b32400, #726e6e);
   border: 0;
   border-radius: 50px;
   cursor: pointer;
   color: white;
-  font-weight: 400;
+  font-family: "VikingstyleBold";
   transition: opacity 300ms ease-in-out;
 }
 button:hover,
 .button:hover {
   opacity: 0.75;
+}
+
+.button_git {
+  background: linear-gradient(90deg, #388eca 0%, #b7f7f7 100%);
+  color: black;
 }
 
 @media (max-width: 63.9375em) {
@@ -125,6 +133,44 @@ button:hover,
   .hide-for-desktop {
     display: none;
   }
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?vcafay");
+  src: url("fonts/icomoon.eot?vcafay#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?vcafay") format("truetype"), url("fonts/icomoon.woff?vcafay") format("woff"), url("fonts/icomoon.svg?vcafay#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-horn:before {
+  content: "";
+}
+
+.icon-Home_ico:before {
+  content: "";
+}
+
+.icon-feast_ico2:before {
+  content: "";
+}
+
+.icon-feast_ico21:before {
+  content: "";
 }
 
 .has-fade {
@@ -222,14 +268,20 @@ button:hover,
 }
 .header nav {
   position: relative;
-  padding: 0.425rem 1.5rem;
+  padding: 0.125rem 1.5rem;
   background-color: #46473e;
 }
 .header__logo {
   font-family: "VikingstyleBold";
   position: relative;
-  font-size: 40px;
+  font-size: 2.1875rem;
   color: white;
+}
+.header__logo__text {
+  display: inline-block;
+  position: absolute;
+  width: 8.4375rem;
+  padding-left: 0.625rem;
 }
 .header__logo img {
   height: 2.575rem;
@@ -265,7 +317,7 @@ button:hover,
   height: 5px;
   left: 0;
   right: 0;
-  bottom: -21px;
+  bottom: -15px;
   border-radius: 50px;
   background: linear-gradient(to left, #b32400, #726e6e);
   opacity: 0;
@@ -328,7 +380,7 @@ button:hover,
 }
 @media (min-width: 87.5em) {
   .section canvas {
-    left: 15%;
+    left: 12%;
   }
 }
 
@@ -344,7 +396,13 @@ button:hover,
   }
 }
 .section2__col {
-  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  text-align: left;
+  font-size: 1.15rem;
+}
+.section2__col h2 {
+  font-family: "VikingstyleBold";
+  font-size: 3.2rem;
 }
 @media (min-width: 64em) {
   .section2__col {
@@ -352,23 +410,33 @@ button:hover,
     width: 50%;
   }
 }
+.section2__col ul {
+  list-style: square;
+  list-style: none;
+}
+.section2__col ul li {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-left: 37px;
+  background: url("../../img/ship-bullet_30x30.svg") no-repeat left 5px;
+}
 .section2__img {
   position: relative;
-  background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+  background-image: url("../../img/b82e325431d42075666844284edc4411.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 26rem;
+  min-height: 25rem;
 }
 @media (min-width: 64em) {
   .section2__img {
     order: 2;
     position: relative;
-    background-image: url("../../img/8d1fe35659e87698f11b961150903dd2.jpg");
+    background-image: url("../../img/b82e325431d42075666844284edc4411.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    min-height: 36rem;
+    min-height: 35rem;
     width: 50%;
   }
 }
@@ -386,6 +454,10 @@ button:hover,
 }
 .section3__col {
   text-align: center;
+}
+.section3__col h2 {
+  font-family: "VikingstyleBold";
+  font-size: 3.2rem;
 }
 @media (min-width: 64em) {
   .section3__col {
@@ -414,6 +486,57 @@ button:hover,
   }
 }
 
+.hero1 {
+  background-color: black;
+  display: block;
+  margin-bottom: 4.6875rem;
+}
+@media (min-width: 64em) {
+  .hero1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.hero1__image {
+  position: relative;
+  background-image: url("../../img/bg_data_analysis_small.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 25rem;
+}
+@media (min-width: 64em) {
+  .hero1__image {
+    order: 2;
+    position: relative;
+    background-image: url("../../img/bg_data_analysis.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 40rem;
+    width: 60%;
+  }
+}
+.hero1__text {
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .hero1__text {
+    order: 1;
+    width: 40%;
+    text-align: left;
+  }
+}
+.hero1__text h2 {
+  font-size: 4rem;
+  font-family: "VikingstyleBold";
+  text-align: center;
+}
+.hero1__text p {
+  font-size: 1.875rem;
+}
+
 @media (min-width: 64em) {
   .hero {
     display: flex;
@@ -432,7 +555,7 @@ button:hover,
   .hero__img {
     flex: 2;
     order: 2;
-    height: 41rem;
+    height: 35rem;
     background-image: url("../../img/einar-martinsen-viking-boatarrival-em-02.jpg");
     background-position: center center;
   }
@@ -461,87 +584,84 @@ button:hover,
   }
 }
 
-.card {
-  background: white;
-  color: black;
-}
-.card__cta {
+.feature {
   color: white;
-  transition: opacity 600ms ease-in-out;
 }
-.card__cta:hover {
-  opacity: 0.75;
-}
-
 .feature__intro {
   margin-bottom: 3.75rem;
 }
 @media (min-width: 64em) {
   .feature__intro {
-    max-width: 70%;
+    max-width: 100%;
   }
+}
+.feature__intro h2 {
+  text-align: center;
+}
+.feature__intro p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.45rem;
+}
+.feature__intro p span {
+  font-family: "VikingstyleBold";
+  letter-spacing: 2px;
+  font-size: 28px;
 }
 @media (min-width: 40em) {
   .feature__grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.25rem;
   }
 }
 .feature__item {
-  background-color: white;
-  color: black;
-  border: 1px solid palevioletred;
-  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #726e6e;
+  background-color: #46473e;
+  border-radius: 0.312rem;
   padding: 0.95rem;
-  width: 90%;
+  overflow: hidden;
   margin: 1%;
 }
-@media (min-width: 40em) {
+@media (max-width: 63.9375em) {
   .feature__item {
-    flex: 0 0 50%;
-  }
-}
-@media (min-width: 64em) {
-  .feature__item {
-    flex: 1;
+    margin-bottom: 1.175rem;
   }
 }
 .feature__image {
-  width: 100%;
-  border: 1px solid palevioletred;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   margin-bottom: 2rem;
+  height: 12rem;
 }
 @media (min-width: 64em) {
   .feature__image {
-    margin-bottom: 2.75rem;
+    margin-bottom: 2.25rem;
   }
-}
-.feature__image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 .feature__title {
   font-family: "VikingstyleBold";
   color: #6294ac;
   line-height: 1.15;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.42rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: ) {
   .feature__title {
-    font-size: 2.75rem;
     margin-bottom: 2.12rem;
   }
 }
 .feature__description {
-  font-size: 1.45rem;
-  line-height: 1.5;
+  font-size: 1.225rem;
+  font-family: "Noto Sans", sans-serif;
   margin-bottom: 2.5rem;
 }
 .feature__footer {
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 1.5rem;
 }
 
@@ -580,6 +700,9 @@ button:hover,
 .article__text {
   padding: 1.875rem 1.875rem 2.5rem 1.875rem;
   color: white;
+  font-family: "Noto Sans", sans-serif;
+  text-align: left;
+  font-size: 1.15rem;
 }
 @media (min-width: 40em) {
   .article__text {
@@ -633,6 +756,7 @@ button:hover,
 @media (min-width: 64em) {
   .footer__logo {
     grid-area: logo;
+    align-self: center;
   }
 }
 @media (max-width: 63.9375em) {
@@ -721,4 +845,99 @@ button:hover,
     align-self: end;
     justify-self: end;
   }
+}
+
+.contact {
+  font-family: "lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__center {
+  width: 90%;
+  background-color: #46473e;
+}
+@media (min-width: 40em) {
+  .contact__center {
+    width: 55%;
+  }
+}
+.contact__center__avatar img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-top: 5%;
+  margin-left: 8.125rem;
+}
+@media (min-width: 40em) {
+  .contact__center__avatar img {
+    width: 280px;
+    height: 280px;
+    margin-left: 0;
+  }
+}
+.contact__center__content {
+  padding: 10px;
+}
+@media (min-width: 40em) {
+  .contact__center__content {
+    padding: 20px;
+  }
+}
+.contact__center__content h1 {
+  padding: 0px;
+  color: wheat;
+  font-family: "VikingstyleBold";
+  text-align: center;
+}
+@media (min-width: 40em) {
+  .contact__center__content h1 {
+    padding: 0px;
+    font-size: 60px;
+  }
+}
+.contact__center__content p {
+  letter-spacing: 1px;
+  width: 90%;
+  margin: 10px auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
+@media (min-width: 40em) {
+  .contact__center__content p {
+    width: 80%;
+  }
+}
+.contact__center__content h3 {
+  margin: 0;
+  padding: 0px;
+  color: wheat;
+  font-family: "VikingstyleBold";
+  font-size: 40px;
+  text-align: center;
+}
+@media (min-width: 40em) {
+  .contact__center__content h3 {
+    padding: 0px;
+    font-size: 40px;
+  }
+}
+.contact__center__social {
+  padding: 10px;
+}
+@media (min-width: 40em) {
+  .contact__center__social {
+    padding-left: 150px;
+    padding-right: 150px;
+    width: 60%;
+  }
+}
+.contact__center__social i {
+  padding: 0 10px;
+  font-size: 30px;
+  color: white;
+  transition: 0.4s;
+}
+.contact__center__social i:hover {
+  color: #750008;
 }/*# sourceMappingURL=style.css.map */

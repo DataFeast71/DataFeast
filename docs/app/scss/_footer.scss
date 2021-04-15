@@ -36,6 +36,7 @@
 
     @include breakpoint-up(large) {
       grid-area: logo;
+      align-self: center;
     }
   }
 

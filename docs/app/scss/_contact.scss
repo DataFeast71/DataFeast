@@ -1,0 +1,111 @@
+.contact {
+  font-family: "lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   min-height: 300vh;
+  &__center {
+    width: 90%;
+    background-color: $greyMetal;
+    // height: 40vh;
+
+    @include breakpoint-up(medium) {
+      width: 55%;
+      //   height: 60vh;
+    }
+
+    &__avatar {
+      img {
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        margin-top: 5%;
+        margin-left: 8.125rem;
+        // object-fit: cover;
+        // object-position: 0 -5px;
+
+        @include breakpoint-up(medium) {
+          width: 280px;
+          height: 280px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__content {
+      padding: 10px;
+
+      @include breakpoint-up(medium) {
+        padding: 20px;
+      }
+
+      h1 {
+        padding: 0px;
+        color: wheat;
+        font-family: "VikingstyleBold";
+        text-align: center;
+
+        @include breakpoint-up(medium) {
+          padding: 0px;
+          font-size: 60px;
+          //   position: relative;
+          //   left: 280px;
+          //   width: 250px;
+          //   top: -370px;
+        }
+      }
+
+      p {
+        letter-spacing: 1px;
+        width: 90%;
+        margin: 10px auto;
+        text-align: justify;
+        text-justify: inter-word;
+
+        @include breakpoint-up(medium) {
+          width: 80%;
+          //   position: relative;
+        }
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0px;
+        color: wheat;
+        font-family: "VikingstyleBold";
+        font-size: 40px;
+        text-align: center;
+
+        @include breakpoint-up(medium) {
+          padding: 0px;
+          font-size: 40px;
+          //   position: relative;
+          //   left: 280px;
+          //   width: 250px;
+          //   top: -370px;
+        }
+      }
+    }
+
+    &__social {
+      padding: 10px;
+
+      @include breakpoint-up(medium) {
+        padding-left: 150px;
+        padding-right: 150px;
+        width: 60%;
+      }
+
+      i {
+        padding: 0 10px;
+        font-size: 30px;
+        color: $white;
+        transition: 0.4s;
+      }
+
+      i:hover {
+        color: $redDark;
+      }
+    }
+  }
+}

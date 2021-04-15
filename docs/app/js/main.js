@@ -28,7 +28,7 @@ image.addEventListener("load", () => {
     canvas.width = 400;
     canvas.height = 332;
   } else {
-    canvas.width = 824;
+    canvas.width = 800;
     canvas.height = 632;
   }
 

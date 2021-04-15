@@ -14,7 +14,7 @@
     @include breakpoint-up(large) {
       flex: 2;
       order: 2;
-      height: 41rem;
+      height: 35rem;
       background-image: url("../../img/einar-martinsen-viking-boatarrival-em-02.jpg");
       background-position: center center;
     }
@@ -60,16 +60,16 @@
 //   font-family: "VikingstyleBold";
 // }
 
-.card {
-  background: $white;
-  color: black;
+// .card {
+//   background: $white;
+//   color: black;
 
-  &__cta {
-    color: white;
-    transition: opacity 600ms ease-in-out;
+//   &__cta {
+//     color: white;
+//     transition: opacity 600ms ease-in-out;
 
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-}
+//     &:hover {
+//       opacity: 0.75;
+//     }
+//   }
+// }

@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Feast</title>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="app/scss/style.css" />
     <!-- FavIcon -->
-    <link rel="icon" type="image/x-icon" href="img/DataFeast.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="img/DataFeast.ico" /> -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon-32x32.png"
+      sizes="32x32"
+    />
   </head>
   <body>
     <header class="header">
       <div class="overlay has-fade"></div>
       <nav class="container container--pall flex flex-jc-sb flex-ai-c">
         <a href="/" class="header__logo">
-          <img src="img/Ship.jpeg" alt="Data Feast" /> Data Feast
+          <img src="img/Logo_Feast.svg" alt="Data Feast" />
+          <div class="header__logo__text">Data Feast</div>
         </a>
 
         <!-- toggle -->
@@ -28,17 +39,17 @@
 
         <!-- links -->
         <div class="header__links hide-for-mobile">
-          <a href="#">Home</a>
+          <a href="#"><span class="icon-Home_ico"></span> Home</a>
           <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="blog.html">Blog</a>
+          <a href="contact.html"><span class="icon-horn"></span> Contact</a>
+          <a href="blog.html"><span class="icon-feast_ico2"></span> Blog</a>
         </div>
       </nav>
       <div class="header__menu has-fade">
-        <a href="#">Home</a>
+        <a href="#"><span class="icon-Home_ico"></span> Home</a>
         <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="blog.html">Blog</a>
+        <a href="contact.html"><span class="icon-horn"></span> Contact</a>
+        <a href="blog.html"><span class="icon-feast_ico2"></span> Blog</a>
       </div>
     </header>
 
@@ -61,56 +72,117 @@
 
     <hr class="style-four" />
 
+    <section class="hero1">
+      <div class="hero1__text container--pall">
+        <h2>Análisis y Visualización de datos</h2>
+        <p>
+          Reune tus datos y te ayudamos a darles la mejor presentación y llevar
+          tu investigación a un mejor nivel.
+        </p>
+      </div>
+      <div class="hero1__image"></div>
+    </section>
+
     <section class="section2">
       <div class="section2__col container--pall">
-        <h2>What we do?</h2>
+        <h2 style="text-align: center">¿Que hacemos?</h2>
+        <p style="text-align: left">
+          Nos gusta y estamos interesados en trabajar con datos, no importando
+          el tema por lo que damos nuestro servicio en los proyectos que se
+          requiera alguna manipulación en datos. Podemos ayudar en:
+        </p>
+        <ul>
+          <li>Limpieza de datos</li>
+          <li>Recolección de datos</li>
+          <li>Cambios de formato</li>
+          <li>Analisis Estadisticos</li>
+          <li>Visualización de datos</li>
+        </ul>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugit
-          qui alias cum officiis blanditiis nisi quae saepe in sed. Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Molestiae a dolor
-          recusandae sed. Dolorum facere minima, nesciunt nihil consequatur
-          aliquid exercitationem omnis totam assumenda fugit corrupti itaque
-          deleniti architecto quos?
+          Te podemos ayudar a darle una mejor representación a tus datos para
+          que sigas construyendo tu proyecto.
         </p>
       </div>
       <div class="section2__img"></div>
     </section>
 
-    <br>
-    
+    <br />
+
     <section class="section3">
       <div class="section3__col container--pall">
-        <h2>Why Data Feast?</h2>
+        <h2>¿Por que <i>Data Feast</i> ?</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugit
-          qui alias cum officiis blanditiis nisi quae saepe in sed. Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Molestiae a dolor
-          recusandae sed. Dolorum facere minima, nesciunt nihil consequatur
-          aliquid exercitationem omnis totam assumenda fugit corrupti itaque
-          deleniti architecto quos?
+          En cualquier área, los datos son la esencia de toda investigación pero
+          sabemos que no son fácil obtenerlos. Requiere mucha lucha y
+          perseverancia pero cuando uno los tiene se llena de emoción.
+        </p>
+
+        <p>
+          Nosotros vemos los datos como un festín por que con ellos hay mucho
+          que se puede hacer, hay multiples temas, cada exploración es distinta,
+          cada objectivo es único, visualizaciones elegantes y hermosas ... Un
+          festin que se da gracias al trabajo de las personas que tratan de
+          obtenerlos por lo que tratamos de darles un trabajo personalizado para
+          que cuenten la mejor historia posible.
+        </p>
+
+        <p>
+          Y dado que nos gusta la cultura nordica decidimos combinar la tematica
         </p>
       </div>
       <div class="section3__img"></div>
     </section>
 
     <section class="articles">
-      <div class="article__content container containter--pall">
-        <h2>Last Articles</h2>
+      <div class="article__content container container--pall">
+        <h2>Ultimos articulos</h2>
 
         <div class="article__grid">
           <a href="#" class="article__item">
             <div
               class="article__image"
               style="
-                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
+                background-image: url('img/posts_COVID_Vaccines_heatmap.png');
               "
             ></div>
             <div class="article__text">
-              <div class="article__title">Energy</div>
+              <div class="article__title">Vacunas COVID19</div>
               <div class="article__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad
-                est animi culpa quas magni nostrum obcaecati doloribus, incidunt
-                nisi, voluptatem nemo facilis tenetur officiis!
+                Revisamos los datos de la aplicación de las vacunas en los
+                diferentes paises desde el primer dia vacunación en el mundo.
+                Visualizamos los datos en un heatmap.
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('img/post_Happiness_PCA.png')"
+            ></div>
+            <div class="article__text">
+              <div class="article__title">Felicidad: PCA</div>
+              <div class="article__description">
+                Usando los datos del indice de la felicidad y los parametros que
+                se evaluan en cada país buscamos cuales son los contrastes entre
+                los continentes realizando un analisis de componentes
+                principales.
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('img/post_Happines_appShiny.png')"
+            ></div>
+            <div class="article__text">
+              <div class="article__title">Felicidad: App</div>
+              <div class="article__description">
+                Juntando los datos de felicidad construimos una app en Shiny que
+                nos permite visulizar el comportamiento de las variables que se
+                evaluan a lo largo del tiempo. ¿Los países que han sido
+                "felices" siempre lo han sido?
               </div>
             </div>
           </a>
@@ -119,48 +191,15 @@
             <div
               class="article__image"
               style="
-                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
+                background-image: url('img/post_COVID_Vaccines_network.png');
               "
             ></div>
             <div class="article__text">
-              <div class="article__title">COVID</div>
+              <div class="article__title">COVID19: Network</div>
               <div class="article__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad
-                est animi culpa quas magni nostrum obcaecati doloribus, incidunt
-                nisi, voluptatem nemo facilis tenetur officiis!
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="
-                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
-              "
-            ></div>
-            <div class="article__text">
-              <div class="article__title">Vaccines</div>
-              <div class="article__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad
-                est animi culpa quas magni nostrum obcaecati doloribus, incidunt
-                nisi, voluptatem nemo facilis tenetur officiis!
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="article__item">
-            <div
-              class="article__image"
-              style="
-                background-image: url('img/einar-martinsen-viking-boatarrival-em-02.jpg');
-              "
-            ></div>
-            <div class="article__text">
-              <div class="article__title">Obesity</div>
-              <div class="article__description">
-                We explore the nutrition and obesity in countries along the
-                years ...
+                Buscamos cuales son los países que más han comprado vacunas y
+                cuales con las farmaceuticas de donde las han adquirido con lo
+                cual formamos una red.
               </div>
             </div>
           </a>
@@ -171,10 +210,20 @@
     <br />
     <br />
 
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#a2d9ff"
+          fill-opacity="1"
+          d="M0,96L40,106.7C80,117,160,139,240,149.3C320,160,400,160,480,176C560,192,640,224,720,224C800,224,880,192,960,202.7C1040,213,1120,267,1200,282.7C1280,299,1360,277,1400,266.7L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <a href="/" class="footer__logo">
-          <img src="img/Ship.jpeg" alt="Data Feast" /> Data Feast
+          <img src="img/Logo_Feast.svg" alt="Data Feast" /> Data Feast
         </a>
 
         <div class="footer__social">

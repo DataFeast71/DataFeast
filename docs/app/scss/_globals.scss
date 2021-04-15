@@ -30,6 +30,7 @@ body {
   font-size: $font-med;
   color: $white;
   min-height: 300vh;
+  // overflow-x: hidden;
 
   &.noscroll {
     overflow: hidden;
@@ -54,14 +55,14 @@ a:hover {
 
 // spacing
 .container {
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 0 auto;
 
   &--pall {
     padding-top: 2.25rem;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
     padding-bottom: 2.25rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
   }
   &--py {
     padding-top: 2.25rem;
@@ -112,18 +113,30 @@ hr.style-four {
 // Buttons
 button,
 .button {
-  padding: 0.875rem 2.1875rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.175rem 2.1875rem;
   background: linear-gradient(to left, $redBright, $greyLight);
   border: 0;
   border-radius: 50px;
   cursor: pointer;
   color: $white;
-  font-weight: 400;
+  font-family: "VikingstyleBold";
+  // font-weight: 400;
   transition: opacity 300ms ease-in-out;
 
   &:hover {
     opacity: 0.75;
   }
+}
+
+.button_git {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 142, 202, 1) 0%,
+    rgba(183, 247, 247, 1) 100%
+  );
+  color: black;
 }
 
 // Visibility
@@ -139,4 +152,45 @@ button,
   @include breakpoint-up(large) {
     display: none;
   }
+}
+
+// Icons
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vcafay');
+  src:  url('fonts/icomoon.eot?vcafay#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vcafay') format('truetype'),
+    url('fonts/icomoon.woff?vcafay') format('woff'),
+    url('fonts/icomoon.svg?vcafay#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-horn:before {
+  content: "\e901";
+}
+.icon-Home_ico:before {
+  content: "\e902";
+}
+.icon-feast_ico2:before {
+  content: "\e903";
+}
+.icon-feast_ico21:before {
+  content: "\e900";
 }
