@@ -882,7 +882,7 @@ button:hover,
 }
 
 .contact {
-  background: url("/docs/img/glenn-porter-waypoint-medium.jpg") center center;
+  background: url("../../img/glenn-porter-waypoint-medium.jpg") center center;
   background-size: cover;
   font-family: "lato", sans-serif;
   display: flex;
