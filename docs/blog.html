@@ -29,7 +29,7 @@
     <header class="header">
       <div class="overlay has-fade"></div>
       <nav class="container container--pall flex flex-jc-sb flex-ai-c">
-        <a href="/" class="header__logo">
+        <a href="./" class="header__logo">
           <img src="img/Logo_Feast.svg" alt="Data Feast" />
           <div class="header__logo__text">Data Feast</div>
         </a>
@@ -44,14 +44,18 @@
         <!-- links -->
         <div class="header__links hide-for-mobile">
           <a href="./"><span class="icon-Home_ico"></span> Home</a>
-          <a href="#">About</a>
+          <a href="about.html"
+            ><span class="icon-viking-helmet"></span> About</a
+          >
           <a href="contact.html"><span class="icon-horn"></span> Contact</a>
-          <a href="blog.html"><span class="icon-feast_ico2"></span> Blog</a>
+          <a href="blog.html" class="active"
+            ><span class="icon-feast_ico2"></span> Blog</a
+          >
         </div>
       </nav>
       <div class="header__menu has-fade">
-        <a href="#"><span class="icon-Home_ico"></span> Home</a>
-        <a href="#">About</a>
+        <a href="./"><span class="icon-Home_ico"></span> Home</a>
+        <a href="about.html"><span class="icon-viking-helmet"></span> About</a>
         <a href="contact.html"><span class="icon-horn"></span> Contact</a>
         <a href="blog.html"><span class="icon-feast_ico2"></span> Blog</a>
       </div>
@@ -112,10 +116,10 @@
             Visualizamos los datos en un heatmap.
           </div>
           <div class="feature__footer">
-            <a href="#" class="button"
+            <a href="https://datafeast71.github.io/COVID19_plots/COVID-Vaccine_heatmap.html" class="button"
               ><span class="icon-feast_ico2"></span> Trabajo</a
             >
-            <a href="#" class="button button_git"
+            <a href="https://github.com/DataFeast71/COVID19_plots" class="button button_git"
               ><i class="fab fa-github"></i> Datos</a
             >
           </div>
@@ -133,20 +137,20 @@
             continentes realizando un analisis de componentes principales.
           </div>
           <div class="feature__footer">
-            <a href="#" class="button"
+            <a href="https://datafeast71.github.io/Happiness_report/Happiness_PCA.html" class="button"
               ><span class="icon-feast_ico2"></span> Trabajo</a
             >
-            <a href="#" class="button button_git"
+            <a href="https://github.com/DataFeast71/Happiness_report" class="button button_git"
               ><i class="fab fa-github"></i> Datos</a
             >
           </div>
         </div>
 
         <div class="feature__item">
-          <div class="feature__image"
-              style="background-image: url('img/post_Happines_appShiny.png')"
-            >
-          </div>
+          <div
+            class="feature__image"
+            style="background-image: url('img/post_Happines_appShiny.png')"
+          ></div>
           <div class="feature__title">Felicidad: App</div>
           <div class="feature__description">
             Juntando los datos de felicidad construimos una app en Shiny que nos
@@ -155,22 +159,20 @@
             han sido?
           </div>
           <div class="feature__footer">
-            <a href="#" class="button"
+            <a href="https://datafeast71.shinyapps.io/Happiness/" class="button"
               ><span class="icon-feast_ico2"></span> Trabajo</a
             >
-            <a href="#" class="button button_git"
+            <a href="https://github.com/DataFeast71/Happiness_report" class="button button_git"
               ><i class="fab fa-github"></i> Datos</a
             >
           </div>
         </div>
 
         <div class="feature__item">
-          <div class="feature__image"
-              style="
-                background-image: url('img/post_COVID_Vaccines_network.png');
-              "
-            >
-          </div>
+          <div
+            class="feature__image"
+            style="background-image: url('img/post_COVID_Vaccines_network.png')"
+          ></div>
           <div class="feature__title">COVID19: Network</div>
           <div class="feature__description">
             Buscamos cuales son los países que más han comprado vacunas y cuales
@@ -178,23 +180,24 @@
             formamos una red.
           </div>
           <div class="feature__footer">
-            <a href="#" class="button"
+            <a href="https://datafeast71.github.io/COVID19_plots/COVID_Vaccine_network.html" class="button"
               ><span class="icon-feast_ico2"></span> Trabajo</a
             >
-            <a href="#" class="button button_git"
+            <a href="https://github.com/DataFeast71/COVID19_plots" class="button button_git"
               ><i class="fab fa-github"></i> Datos</a
             >
           </div>
         </div>
 
         <div class="feature__item">
-          <div class="feature__image"
-              style="background-image: url('img/post_Becas_Mexico.png')"
-            >
-          </div>
+          <div
+            class="feature__image"
+            style="background-image: url('img/post_Becas_Mexico.png')"
+          ></div>
           <div class="feature__title">Becas Mexico</div>
           <div class="feature__description">
-            Buscamos y reunimos los datos de becarios en el extranjero para ver como han sido los cambios en cada año en México.
+            Buscamos y reunimos los datos de becarios en el extranjero para ver
+            como han sido los cambios en cada año en México.
           </div>
           <div class="feature__footer">
             <a href="#" class="button"
@@ -207,42 +210,42 @@
         </div>
 
         <div class="feature__item">
-          <div class="feature__image"
-              style="
-                background-image: url('img/post_Obesity_world.png');
-              "
-            >
-          </div>
+          <div
+            class="feature__image"
+            style="background-image: url('img/post_Obesity_world.png')"
+          ></div>
           <div class="feature__title">Obesidad</div>
           <div class="feature__description">
-            Graficamos los cambios nutricionales de los habitantes de cada pais y su porcentaje de obesidad a lo largo de los años y ver si hay un patron por continentes.
+            Graficamos los cambios nutricionales de los habitantes de cada pais
+            y su porcentaje de obesidad a lo largo de los años y ver si hay un
+            patron por continentes.
           </div>
           <div class="feature__footer">
-            <a href="#" class="button"
+            <a href="https://datafeast71.github.io/Obesity/Obesidad.html" class="button"
               ><span class="icon-feast_ico2"></span> Trabajo</a
             >
-            <a href="#" class="button button_git"
+            <a href="https://github.com/DataFeast71/Obesity" class="button button_git"
               ><i class="fab fa-github"></i> Datos</a
             >
           </div>
         </div>
 
         <div class="feature__item">
-          <div class="feature__image"
-              style="
-                background-image: url('img/post_COVID_Vaccines_treemap.png');
-              "
-            >
-          </div>
+          <div
+            class="feature__image"
+            style="background-image: url('img/post_COVID_Vaccines_treemap.png')"
+          ></div>
           <div class="feature__title">COVID19: Treemap</div>
           <div class="feature__description">
-            Buscamos que países han adquirido las vacunas con las diferentes farmaceuticas y representamos los datos en un <i>treemap</i> para tener mejor idea de las proporciones.
+            Buscamos que países han adquirido las vacunas con las diferentes
+            farmaceuticas y representamos los datos en un <i>treemap</i> para
+            tener mejor idea de las proporciones.
           </div>
           <div class="feature__footer">
-            <a href="#" class="button"
+            <a href="https://datafeast71.github.io/COVID19_plots/COVID_Vaccine_treemap.html" class="button"
               ><span class="icon-feast_ico2"></span> Trabajo</a
             >
-            <a href="#" class="button button_git"
+            <a href="https://github.com/DataFeast71/COVID19_plots" class="button button_git"
               ><i class="fab fa-github"></i> Datos</a
             >
           </div>
@@ -252,12 +255,14 @@
 
     <footer class="footer">
       <div class="container">
-        <a href="/" class="footer__logo">
+        <a href="#" class="footer__logo">
           <img src="img/Logo_Feast.svg" alt="Data Feast" /> Data Feast
         </a>
 
         <div class="footer__social">
-          <a href="#">
+          <a
+            href="https://www.facebook.com/An%C3%A1lisis-y-visualizaci%C3%B3n-de-datos-100602148375744"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <title>Facebook</title>
               <path
@@ -269,12 +274,12 @@
         </div>
 
         <div class="footer__links col1">
-          <a href="#">About Us</a>
-          <a href="#">Contact</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
         </div>
 
         <div class="footer__links col2">
-          <a href="#">Blog</a>
+          <a href="blog.html">Blog</a>
         </div>
 
         <div class="footer__cta">

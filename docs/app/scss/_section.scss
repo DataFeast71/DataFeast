@@ -23,9 +23,14 @@
 
   canvas {
     position: relative;
-    left: 6%;
-    // width: 600px;
-    // height: 632px;
+    left: -10%;
+    // width: 370px;
+    // height: 302px;
+    @include breakpoint-down(small) {
+      width: 370px;
+      height: 302px;
+    }
+
     @include breakpoint-up(medium) {
       left: -6%;
     }
@@ -46,11 +51,11 @@
   }
 
   &__col {
-    // font-family: "Public Sans", sans-serif;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "lato", sans-serif;
+    font-weight: normal;
     // width: 100%;
     text-align: left;
-    font-size: 1.15rem;
+    font-size: 1.225rem;
 
     h2 {
       font-family: "VikingstyleBold";
@@ -113,7 +118,7 @@
 
   &__col {
     text-align: center;
-    
+
     h2 {
       font-family: "VikingstyleBold";
       font-size: 3.2rem;

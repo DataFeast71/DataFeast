@@ -1,0 +1,36 @@
+.about {
+  @include breakpoint-up(medium) {
+    width: 80%;
+  }
+
+  @include breakpoint-up(large) {
+    width: 60%;
+  }
+
+  &__title {
+    background-color: $greyMetal;
+    height: auto;
+    text-align: center;
+    letter-spacing: 5px;
+    border-radius: 10px;
+  }
+
+  &__description {
+    line-height: 1.5;
+    font-family: "lato", sans-serif;
+    font-weight: normal;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.225rem;
+
+    @include breakpoint-up(large) {
+      width: 100%;
+    }
+
+    span {
+      font-family: "VikingstyleBold";
+      letter-spacing: 5px;
+      font-size: 1.85rem;
+    }
+  }
+}

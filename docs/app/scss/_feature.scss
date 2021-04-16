@@ -1,5 +1,8 @@
 .feature {
   color: $white;
+  font-family: "lato", sans-serif;
+  font-weight: normal;
+
 
   &__intro {
     margin-bottom: 3.75rem;
@@ -10,10 +13,11 @@
 
     h2 {
       text-align: center;
+      letter-spacing: 5px;
+      font-family: "VikingstyleBold";
     }
     p {
-      font-family: "Noto Sans", sans-serif;
-      font-size: 1.45rem;
+      font-size: 1.225rem;
       span {
         font-family: "VikingstyleBold";
         letter-spacing: 2px;
@@ -97,7 +101,6 @@
 
   &__description {
     font-size: 1.225rem;
-    font-family: "Noto Sans", sans-serif;
     // line-height: 1.5;
     margin-bottom: 2.5rem;
   }

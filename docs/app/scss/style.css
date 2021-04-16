@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  background: black;
+  background: #030303;
   margin: 0;
   padding: 0;
   font-family: "Vikingstyle";
@@ -28,7 +28,8 @@ body {
   line-height: 1.3;
   font-size: 1.525rem;
   color: white;
-  min-height: 300vh;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 body.noscroll {
   overflow: hidden;
@@ -137,13 +138,14 @@ button:hover,
 
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?vcafay");
-  src: url("fonts/icomoon.eot?vcafay#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?vcafay") format("truetype"), url("fonts/icomoon.woff?vcafay") format("woff"), url("fonts/icomoon.svg?vcafay#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?4a3cr4");
+  src: url("fonts/icomoon.eot?4a3cr4#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?4a3cr4") format("truetype"), url("fonts/icomoon.woff?4a3cr4") format("woff"), url("fonts/icomoon.svg?4a3cr4#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-[class^=icon-], [class*=" icon-"] {
+[class^=icon-],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
@@ -157,19 +159,23 @@ button:hover,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-horn:before {
+.icon-feast_ico:before {
   content: "";
 }
 
-.icon-Home_ico:before {
+.icon-feast_ico2:before {
   content: "";
 }
 
-.icon-feast_ico2:before {
+.icon-Home_ico:before {
   content: "";
 }
 
-.icon-feast_ico21:before {
+.icon-horn:before {
+  content: "";
+}
+
+.icon-viking-helmet:before {
   content: "";
 }
 
@@ -306,6 +312,8 @@ button:hover,
   color: white;
   transition: color 300ms ease-in-out;
   transition: font-family 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  opacity: 0.5;
 }
 .header__links a:not(:last-child) {
   margin-right: 32px;
@@ -323,9 +331,23 @@ button:hover,
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
+.header__links a.active {
+  font-family: "VikingstyleBold";
+  color: white;
+  opacity: 1;
+  transition: none;
+}
+.header__links a.active::before {
+  opacity: 1;
+  background: linear-gradient(to left, white, #726e6e);
+}
+.header__links a.active:hover {
+  color: white;
+}
 .header__links a:hover {
   font-family: "VikingstyleBold";
   color: #b32400;
+  opacity: 1;
 }
 .header__links a:hover::before {
   opacity: 1;
@@ -371,7 +393,13 @@ button:hover,
 }
 .section canvas {
   position: relative;
-  left: 6%;
+  left: -10%;
+}
+@media (max-width: 39.9375em) {
+  .section canvas {
+    width: 370px;
+    height: 302px;
+  }
 }
 @media (min-width: 40em) {
   .section canvas {
@@ -396,9 +424,10 @@ button:hover,
   }
 }
 .section2__col {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "lato", sans-serif;
+  font-weight: normal;
   text-align: left;
-  font-size: 1.15rem;
+  font-size: 1.225rem;
 }
 .section2__col h2 {
   font-family: "VikingstyleBold";
@@ -586,6 +615,8 @@ button:hover,
 
 .feature {
   color: white;
+  font-family: "lato", sans-serif;
+  font-weight: normal;
 }
 .feature__intro {
   margin-bottom: 3.75rem;
@@ -597,10 +628,11 @@ button:hover,
 }
 .feature__intro h2 {
   text-align: center;
+  letter-spacing: 5px;
+  font-family: "VikingstyleBold";
 }
 .feature__intro p {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 1.45rem;
+  font-size: 1.225rem;
 }
 .feature__intro p span {
   font-family: "VikingstyleBold";
@@ -656,7 +688,6 @@ button:hover,
 }
 .feature__description {
   font-size: 1.225rem;
-  font-family: "Noto Sans", sans-serif;
   margin-bottom: 2.5rem;
 }
 .feature__footer {
@@ -848,96 +879,116 @@ button:hover,
 }
 
 .contact {
+  background: url("/docs/img/glenn-porter-waypoint-medium.jpg") center center;
+  background-size: cover;
   font-family: "lato", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .contact__center {
-  width: 90%;
-  background-color: #46473e;
+  width: 95%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  border-radius: 1rem;
+  min-height: 100px;
 }
 @media (min-width: 40em) {
   .contact__center {
-    width: 55%;
+    width: 45%;
   }
 }
-.contact__center__avatar img {
+.contact__center--avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__center--avatar img {
   border-radius: 50%;
-  width: 180px;
-  height: 180px;
+  width: 11.25rem;
+  height: 11.25rem;
   margin-top: 5%;
-  margin-left: 8.125rem;
 }
 @media (min-width: 40em) {
-  .contact__center__avatar img {
-    width: 280px;
-    height: 280px;
+  .contact__center--avatar img {
+    width: 12.5rem;
+    height: 12.5rem;
     margin-left: 0;
   }
 }
-.contact__center__content {
-  padding: 10px;
+.contact__center--content {
+  padding: 0.3125rem;
 }
-@media (min-width: 40em) {
-  .contact__center__content {
-    padding: 20px;
-  }
-}
-.contact__center__content h1 {
-  padding: 0px;
-  color: wheat;
-  font-family: "VikingstyleBold";
-  text-align: center;
-}
-@media (min-width: 40em) {
-  .contact__center__content h1 {
-    padding: 0px;
-    font-size: 60px;
-  }
-}
-.contact__center__content p {
+.contact__center--content h1,
+.contact__center--content p {
+  font-weight: normal;
   letter-spacing: 1px;
-  width: 90%;
-  margin: 10px auto;
-  text-align: justify;
-  text-justify: inter-word;
+}
+.contact__center--content p {
+  font-size: 1.225rem;
 }
 @media (min-width: 40em) {
-  .contact__center__content p {
-    width: 80%;
+  .contact__center--content p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
-.contact__center__content h3 {
-  margin: 0;
-  padding: 0px;
+.contact__center--content h1 {
+  color: #f5deb2;
+  font-family: "VikingstyleBold";
+  letter-spacing: 5px;
+}
+.contact__center--content h3 {
+  margin-top: 20px;
   color: wheat;
   font-family: "VikingstyleBold";
-  font-size: 40px;
-  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 5px;
 }
-@media (min-width: 40em) {
-  .contact__center__content h3 {
-    padding: 0px;
-    font-size: 40px;
-  }
-}
-.contact__center__social {
-  padding: 10px;
-}
-@media (min-width: 40em) {
-  .contact__center__social {
-    padding-left: 150px;
-    padding-right: 150px;
-    width: 60%;
-  }
-}
-.contact__center__social i {
+.contact__center--social i {
   padding: 0 10px;
   font-size: 30px;
   color: white;
   transition: 0.4s;
 }
-.contact__center__social i:hover {
+.contact__center--social i:hover {
   color: #750008;
+}
+
+@media (min-width: 40em) {
+  .about {
+    width: 80%;
+  }
+}
+@media (min-width: 64em) {
+  .about {
+    width: 60%;
+  }
+}
+.about__title {
+  background-color: #46473e;
+  height: auto;
+  text-align: center;
+  letter-spacing: 5px;
+  border-radius: 10px;
+}
+.about__description {
+  line-height: 1.5;
+  font-family: "lato", sans-serif;
+  font-weight: normal;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.225rem;
+}
+@media (min-width: 64em) {
+  .about__description {
+    width: 100%;
+  }
+}
+.about__description span {
+  font-family: "VikingstyleBold";
+  letter-spacing: 5px;
+  font-size: 1.85rem;
 }/*# sourceMappingURL=style.css.map */

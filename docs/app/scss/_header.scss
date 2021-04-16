@@ -78,6 +78,8 @@
       color: $white;
       transition: color 300ms ease-in-out;
       transition: font-family 300ms ease-in-out;
+      transition: opacity 300ms ease-in-out;
+      opacity: 0.5;
 
       &:not(:last-child) {
         margin-right: 32px;
@@ -97,9 +99,27 @@
         transition: opacity 300ms ease-in-out;
       }
 
+      // Active tabs
+      &.active {
+        font-family: "VikingstyleBold";
+        color: $white;
+        opacity: 1;
+        transition: none;
+
+        &::before {
+          opacity: 1;
+          background: linear-gradient(to left, $white, $greyLight);
+        }
+
+        &:hover {
+          color: $white;
+        }
+      }
+
       &:hover {
         font-family: "VikingstyleBold";
         color: $redBright;
+        opacity: 1;
 
         &::before {
           opacity: 1;
