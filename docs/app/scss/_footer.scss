@@ -118,6 +118,7 @@
       grid-area: cta;
       text-align: right;
       justify-self: end;
+      align-self: center;
     }
 
     a.button {
@@ -129,10 +130,12 @@
 
   &__copyright {
     font-size: 0.9375rem;
+    font-family: "lato", sans-serif;
+    font-weight: normal;
 
     @include breakpoint-up(large) {
       grid-area: copyright;
-      align-self: end;
+      align-self: flex-start;
       justify-self: end;
     }
   }

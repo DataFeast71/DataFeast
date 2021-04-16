@@ -860,6 +860,7 @@ button:hover,
     grid-area: cta;
     text-align: right;
     justify-self: end;
+    align-self: center;
   }
 }
 @media (max-width: 63.9375em) {
@@ -869,11 +870,13 @@ button:hover,
 }
 .footer__copyright {
   font-size: 0.9375rem;
+  font-family: "lato", sans-serif;
+  font-weight: normal;
 }
 @media (min-width: 64em) {
   .footer__copyright {
     grid-area: copyright;
-    align-self: end;
+    align-self: flex-start;
     justify-self: end;
   }
 }
