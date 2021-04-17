@@ -31,3 +31,47 @@ btnHamburger.addEventListener("click", () => {
     });
   }
 });
+
+//  working with the posts
+function getJSON(file) {
+  return fetch(file).then((response) => response.json());
+}
+
+// Load JSON data; then Proceed
+getJSON("app/js/posts_dataFeast.json").then((data) => {
+  const lastPosts = data.slice(0, 4);
+
+  const article = document.getElementsByClassName("article__grid");
+  const feature = document.getElementsByClassName("feature__grid");
+
+  if (article.length > 0) {
+    lastPosts.forEach((post) => {
+      const card = `<a href="${post.trabajo}" class="article__item">
+      <div class="article__image" style="background-image: url('${post.image}');"></div>
+      <div class="article__text">
+        <div class="article__title">${post.title}</div>
+        <div class="article__description">${post.description}    </div>
+      </div>
+      </a>`;
+      const ele = document.createElement("div");
+      ele.innerHTML = card;
+      document.querySelector(".article__grid").appendChild(ele.firstChild);
+    });
+  }
+
+  if (feature.length > 0) {
+    data.forEach((post) => {
+      const card = `<div class="feature__item">
+      <div class="feature__image" style="background-image: url('${post.image}');"></div>
+            <div class="feature__title">${post.title}</div>
+            <div class="feature__description"> ${post.description}</div>
+            <div class="feature__footer">
+              <a href="${post.trabajo}" class="button"><span class="icon-feast_ico2"></span> Trabajo</a>
+              <a href="${post.github}" class="button button_git"><i class="fab fa-github"></i> Datos</a>
+            </div></div>`;
+      const ele = document.createElement("div");
+      ele.innerHTML = card;
+      document.querySelector(".feature__grid").appendChild(ele.firstChild);
+    });
+  }
+});

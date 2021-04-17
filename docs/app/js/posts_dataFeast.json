@@ -1,0 +1,51 @@
+[
+  {
+    "trabajo": "https://datafeast71.github.io/COVID19_plots/COVID_Vaccine_network.html",
+    "image": "img/posts_COVID_Vaccines_heatmap.png",
+    "title": "Vacunas COVID19",
+    "description": "Revisamos los datos de la aplicación de las vacunas en los diferentes paises desde el primer dia vacunación en el mundo. Visualizamos los datos en un heatmap.",
+    "github": "https://github.com/DataFeast71/COVID19_plots"
+  },
+  {
+    "trabajo": "https://datafeast71.github.io/Happiness_report/Happiness_PCA.html",
+    "image": "img/post_Happiness_PCA.png",
+    "title": "Felicidad: PCA",
+    "description": "Usando los datos del indice de la felicidad y los parametros que se evaluan en cada país buscamos cuales son los contrastes entre los continentes realizando un analisis de componentes principales.",
+    "github": "https://github.com/DataFeast71/Happiness_report"
+  },
+  {
+    "trabajo": "https://datafeast71.shinyapps.io/Happiness/",
+    "image": "img/post_Happines_appShiny.png",
+    "title": "Felicidad: App",
+    "description": "Juntando los datos de felicidad construimos una app en Shiny que nos permite visulizar el comportamiento de las variables que se evaluan a lo largo del tiempo. ¿Los países que han sido 'felices' siempre lo han sido?",
+    "github": "https://github.com/DataFeast71/Happiness_report"
+  },
+  {
+    "trabajo": "https://datafeast71.github.io/COVID19_plots/COVID_Vaccine_network.html",
+    "image": "img/post_COVID_Vaccines_network.png",
+    "title": "COVID19: Network",
+    "description": "Buscamos cuales son los países que más han comprado vacunas y cuales con las farmaceuticas de donde las han adquirido con lo cual formamos una red.",
+    "github": "https://github.com/DataFeast71/COVID19_plots"
+  },
+  {
+    "trabajo": "",
+    "image": "img/post_Becas_Mexico.png",
+    "title": "Becas Mexico",
+    "description": "Buscamos y reunimos los datos de becarios en el extranjero para ver como han sido los cambios en cada año en México.",
+    "github": ""
+  },
+  {
+    "trabajo": "https://datafeast71.github.io/Obesity/Obesidad.html",
+    "image": "img/post_Obesity_world.png",
+    "title": "Obesidad",
+    "description": "Graficamos los cambios nutricionales de los habitantes de cada pais y su porcentaje de obesidad a lo largo de los años y ver si hay un patron por continentes.",
+    "github": "https://github.com/DataFeast71/Obesity"
+  },
+  {
+    "trabajo": "https://datafeast71.github.io/COVID19_plots/COVID_Vaccine_treemap.html",
+    "image": "img/post_COVID_Vaccines_treemap.png",
+    "title": "COVID19: Treemap",
+    "description": "Buscamos que países han adquirido las vacunas con las diferentes farmaceuticas y representamos los datos en un <i>treemap</i> para tener mejor idea de las proporciones.",
+    "github": "https://github.com/DataFeast71/COVID19_plots"
+  }
+]
