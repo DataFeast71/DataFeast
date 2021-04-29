@@ -1,5 +1,26 @@
 [
   {
+    "trabajo": "https://datafeast71.shinyapps.io/Food-waste-world-country/",
+    "image": "img/Comida_app.png",
+    "title": "Desperdicio de comida: app",
+    "description": "Creamos una app en Shiny para generar los digramas de Sankey que muestran el desperdicio de comida entre cultivos y países en diferentes años.",
+    "github": "https://github.com/DataFeast71/Food_loss"
+  },
+  {
+    "trabajo": "https://datafeast71.github.io/Food_loss/Desperdicio.html",
+    "image": "img/desperdicio_comida_2.png",
+    "title": "Desperdicio de comida",
+    "description": "Reunimos los datos del desperdicio de comida para representarlos en un grafico de Sankey para ver el flujo de la información dependiendo del cultivo.",
+    "github": "https://github.com/DataFeast71/Food_loss"
+  },
+  {
+    "trabajo": "https://datafeast71.shinyapps.io/Energia-Renovable/",
+    "image": "img/post_Energy_app.png",
+    "title": "Energias renovables",
+    "description": "Buscamos las fuentes de energía renovable en las que se han desarrollado en los países y comparar como es su dependencia a estas fuentes de energía- ¿Qué tanto % de energía proviene de estas fuentes?",
+    "github": "https://github.com/DataFeast71/Energy_data"
+  },
+  {
     "trabajo": "https://datafeast71.github.io/COVID19_plots/COVID_Vaccine_network.html",
     "image": "img/posts_COVID_Vaccines_heatmap.png",
     "title": "Vacunas COVID19",

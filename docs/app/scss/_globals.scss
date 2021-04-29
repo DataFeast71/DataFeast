@@ -198,3 +198,17 @@ button,
 .icon-viking-helmet:before {
   content: "\e900";
 }
+
+// Scroll bar
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: $greyMetal;
+  border-radius: 15px;
+}

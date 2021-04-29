@@ -179,6 +179,19 @@ button:hover,
   content: "";
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #46473e;
+  border-radius: 15px;
+}
+
 .has-fade {
   visibility: hidden;
 }
