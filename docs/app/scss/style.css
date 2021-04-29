@@ -965,11 +965,6 @@ button:hover,
     width: 80%;
   }
 }
-@media (min-width: 64em) {
-  .about {
-    width: 60%;
-  }
-}
 .about__title {
   background-color: #46473e;
   height: auto;
@@ -987,8 +982,23 @@ button:hover,
 }
 @media (min-width: 64em) {
   .about__description {
-    width: 100%;
+    display: flex;
+    justify-content: center;
   }
+}
+@media (min-width: 64em) {
+  .about__description .col {
+    margin: 1rem;
+    flex-basis: 100%;
+  }
+}
+.about__description .col .boat {
+  display: flex;
+  justify-content: center;
+}
+.about__description .col .boat img {
+  margin-left: 3rem;
+  height: 15.575rem;
 }
 .about__description span {
   font-family: "VikingstyleBold";

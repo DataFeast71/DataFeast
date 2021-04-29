@@ -4,7 +4,7 @@
   }
 
   @include breakpoint-up(large) {
-    width: 60%;
+    // width: 60%;
   }
 
   &__title {
@@ -24,7 +24,26 @@
     font-size: 1.225rem;
 
     @include breakpoint-up(large) {
-      width: 100%;
+      // width: 100%;
+      display: flex;
+      // flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .col {
+      @include breakpoint-up(large) {
+        margin: 1rem;
+        flex-basis: 100%;
+      }
+
+      .boat {
+        display: flex;
+        justify-content: center;
+        img {
+          margin-left: 3rem;
+          height: 15.575rem;
+        }
+      }
     }
 
     span {
